@@ -6,11 +6,16 @@ public class BuildBinaryTree831Book {
 
     public static LinkedBinaryTree<String> buildTree() {
         LinkedBinaryTree<String> T = new LinkedBinaryTree<>();
-        // //TODO: implement book code fragment 8.3.1
+        Position<String> pvd = T.addRoot("Providence");
+        Position<String> chi = T.addLeft(pvd, "Chicago");
+        Position<String> sea = T.addRight(pvd, "Seattle");
+        Position<String> bal = T.addLeft(chi, "Baltimore");
+        Position<String> nyc = T.addRight(chi, "New York");
         // Recommended: Declare objects pvd, chi, sea, bal, and nyc
         // as type Position<String>
         // Position is an object type that is a node of the tree
         // (as described in the book)
+
         // Then code fragment 8.3.1 commands should work
         return T;
     }
